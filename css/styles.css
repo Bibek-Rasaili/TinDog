@@ -1,19 +1,211 @@
-
 body {
-  font-family: 'Montserrat',sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
-#title {
-  background-color: #ff4c68;
+p {
+  color: #8f8f8f;
+}
+/*HTML Tags should do broad styling such as font-family
+theme color used throughout the website/webpage.
+
+Specific styling such as font-size, line-height, it is
+advised to use CLASSes to style them*/
+
+footer {
+
+  margin-top: 10%;
 }
 
+/* Container */
 .container-fluid {
-  padding: 3% 15%;
+  padding: 7% 15%;
 }
 
-
-#title div.row div h1 {
+/* Heading */
+.big-heading {
   font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-weight: bold;
   font-size: 3rem;
   line-height: 1.5;
+}
+
+/* Section */
+.coloured-section {
+  background-color: #ff4c68;
+  color: white;
+}
+
+.white-section {
+    background-color: #FFF;
+}
+
+/* Download buttons */
+.download-button {
+  margin: 5% 3% 5% 0%;
+}
+
+/* Title Section */
+#title div.container-fluid {
+  padding-top: 3%;
+  text-align: left;
+}
+
+/* title-heading, refactored into big heading  */
+
+/* Navigation Bar */
+#title div nav {
+  padding: 0;
+}
+
+#title div nav a.navbar-brand {
+  font-size: 2.5rem;
+  font-family: 'Ubuntu';
+  font-weight: bold;
+}
+
+#navbarTogglerDemo01 a.nav-link {
+  margin-left: 18px;
+  /* used margin instead of padding and only on left, instead of right*/
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* Using this because Montserrat-Thin is'nt working */
+}
+
+#title div.row div {
+  margin-top: 4.5rem;
+}
+/* #title div div button {
+  margin-top: 30px;
+  margin-right: 20px;
+} */
+
+/* Title Image */
+#mainImg {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 20%;
+  /* Her is 30% */
+}
+
+
+/* Features */
+#features {
+
+  padding-top: 7%;
+  padding-bottom: 7%;
+  /* If it was margin, the phone is still seen as its not covered
+  by features 'elememt' */
+
+  position: relative;
+  /* z-index: 1; not needed as, features is below image in
+  flow of document therefore on top when both are positioned */
+}
+
+.font-icon {
+  color: #ef8172;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.font-icon:hover {
+  color: #ff4c68;
+}
+
+.feature-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* End of Features */
+
+
+/* Testimonial Section */
+#testimonials {
+  background-color: #ef8172;
+}
+/* This has been refactored into container-fluid
+#testimonials div.carousel-inner {
+  padding: 7% 15%;
+   Can be changed to Margin, if wished
+} */
+
+.testimonial-text {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+
+/* Press Section */
+#press {
+  background-color: #ef8172;
+
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  /* #press img could've been used too*/
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing */
+#pricing {
+  padding: 100px;
+  /*Rare to have static padding but
+   for pricing, even on mobile, you are likely need padding....?*/
+
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+.price-text {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* cta -Call to Action */
+#cta div.container-fluid {
+  padding-bottom: 10%;
+}
+
+/* cta-heading refactored into big heading  */
+  /* margin-bottom: 50px; Gotta give margin to buttons anyways
+   so have this there, it will be margin - top instead of course
+*/
+/* #cta button {
+  margin: 50px 20px 20px;
+} Can just use .download-button */
+
+/* Footer  */
+.foot-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width:992px) {
+  #mainImg {
+    position: static;
+    transform: rotate(0);
+  }
+
+  #title div.row {
+    text-align: center;
+  }
 }
